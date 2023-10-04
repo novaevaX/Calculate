@@ -9,9 +9,10 @@
     <!-- BUTTONS -->
     <Button
         android:id="@+id/button_del"
-        android:layout_width="@string/width_but"
-        android:layout_height="@string/height_but"
-        android:layout_marginStart="@string/marginStart"
+        android:layout_width="85sp"
+        android:layout_height="67sp"
+        android:layout_marginStart="15sp"
+        android:onClick="onClickButton"
         android:text="D"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button_clear"
@@ -19,9 +20,10 @@
 
     <Button
         android:id="@+id/button_percent"
-        android:layout_width="@string/width_but"
-        android:layout_height="@string/height_but"
-        android:layout_marginStart="@string/marginStart"
+        android:layout_width="85sp"
+        android:layout_height="67sp"
+        android:layout_marginStart="15sp"
+        android:onClick="onClickButton"
         android:text="%"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button_del"
@@ -29,9 +31,10 @@
 
     <Button
         android:id="@+id/button_divide"
-        android:layout_width="@string/width_but"
-        android:layout_height="@string/height_but"
-        android:layout_marginStart="@string/marginStart"
+        android:layout_width="85sp"
+        android:layout_height="67sp"
+        android:layout_marginStart="15sp"
+        android:onClick="onClickButton"
         android:text="÷"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button_percent"
@@ -39,9 +42,10 @@
 
     <Button
         android:id="@+id/button_clear"
-        android:layout_width="@string/width_but"
-        android:layout_height="@string/height_but"
-        android:layout_marginStart="@string/marginStart"
+        android:layout_width="85sp"
+        android:layout_height="67sp"
+        android:layout_marginStart="15sp"
+        android:onClick="onClickButton"
         android:text="CE"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -49,9 +53,10 @@
 
     <Button
         android:id="@+id/button_7"
-        android:layout_width="@string/width_but"
-        android:layout_height="@string/height_but"
-        android:layout_marginStart="@string/marginStart"
+        android:layout_width="85sp"
+        android:layout_height="67sp"
+        android:layout_marginStart="15sp"
+        android:onClick="onClickButton"
         android:text="7"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -60,9 +65,10 @@
 
     <Button
         android:id="@+id/button_4"
-        android:layout_width="@string/width_but"
-        android:layout_height="@string/height_but"
-        android:layout_marginStart="@string/marginStart"
+        android:layout_width="85sp"
+        android:layout_height="67sp"
+        android:layout_marginStart="15sp"
+        android:onClick="onClickButton"
         android:text="4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -71,9 +77,10 @@
 
     <Button
         android:id="@+id/button_5"
-        android:layout_width="@string/width_but"
-        android:layout_height="@string/height_but"
-        android:layout_marginStart="@string/marginStart"
+        android:layout_width="85sp"
+        android:layout_height="67sp"
+        android:layout_marginStart="15sp"
+        android:onClick="onClickButton"
         android:text="5"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button_4"
@@ -82,9 +89,10 @@
 
     <Button
         android:id="@+id/button_6"
-        android:layout_width="@string/width_but"
-        android:layout_height="@string/height_but"
-        android:layout_marginStart="@string/marginStart"
+        android:layout_width="85sp"
+        android:layout_height="67sp"
+        android:layout_marginStart="15sp"
+        android:onClick="onClickButton"
         android:text="6"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button_5"
@@ -93,9 +101,10 @@
 
     <Button
         android:id="@+id/button_minus"
-        android:layout_width="@string/width_but"
-        android:layout_height="@string/height_but"
-        android:layout_marginStart="@string/marginStart"
+        android:layout_width="85sp"
+        android:layout_height="67sp"
+        android:layout_marginStart="15sp"
+        android:onClick="onClickButton"
         android:text="-"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button_6"
@@ -104,9 +113,10 @@
 
     <Button
         android:id="@+id/button_1"
-        android:layout_width="@string/width_but"
-        android:layout_height="@string/height_but"
-        android:layout_marginStart="@string/marginStart"
+        android:layout_width="85sp"
+        android:layout_height="67sp"
+        android:layout_marginStart="15sp"
+        android:onClick="onClickButton"
         android:text="1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -115,9 +125,10 @@
 
     <Button
         android:id="@+id/button_2"
-        android:layout_width="@string/width_but"
-        android:layout_height="@string/height_but"
-        android:layout_marginStart="@string/marginStart"
+        android:layout_width="85sp"
+        android:layout_height="67sp"
+        android:layout_marginStart="15sp"
+        android:onClick="onClickButton"
         android:text="2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button_1"
@@ -126,9 +137,10 @@
 
     <Button
         android:id="@+id/button_3"
-        android:layout_width="@string/width_but"
-        android:layout_height="@string/height_but"
-        android:layout_marginStart="@string/marginStart"
+        android:layout_width="85sp"
+        android:layout_height="67sp"
+        android:layout_marginStart="15sp"
+        android:onClick="onClickButton"
         android:text="3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button_2"
@@ -137,9 +149,10 @@
 
     <Button
         android:id="@+id/button_plus"
-        android:layout_width="@string/width_but"
-        android:layout_height="@string/height_but"
-        android:layout_marginStart="@string/marginStart"
+        android:layout_width="85sp"
+        android:layout_height="67sp"
+        android:layout_marginStart="15sp"
+        android:onClick="onClickButton"
         android:text="+"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button_3"
@@ -148,9 +161,10 @@
 
     <Button
         android:id="@+id/button_next_screen"
-        android:layout_width="@string/width_but"
-        android:layout_height="@string/height_but"
-        android:layout_marginStart="@string/marginStart"
+        android:layout_width="85sp"
+        android:layout_height="67sp"
+        android:layout_marginStart="15sp"
+        android:onClick="onClickButton"
         android:text="do"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -159,9 +173,10 @@
 
     <Button
         android:id="@+id/button_0"
-        android:layout_width="@string/width_but"
-        android:layout_height="@string/height_but"
-        android:layout_marginStart="@string/marginStart"
+        android:layout_width="85sp"
+        android:layout_height="67sp"
+        android:layout_marginStart="15sp"
+        android:onClick="onClickButton"
         android:text="0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button_next_screen"
@@ -171,9 +186,10 @@
 
     <Button
         android:id="@+id/button_point"
-        android:layout_width="@string/width_but"
-        android:layout_height="@string/height_but"
-        android:layout_marginStart="@string/marginStart"
+        android:layout_width="85sp"
+        android:layout_height="67sp"
+        android:layout_marginStart="15sp"
+        android:onClick="onClickButton"
         android:text=","
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button_0"
@@ -182,9 +198,10 @@
 
     <Button
         android:id="@+id/button_solve"
-        android:layout_width="@string/width_but"
-        android:layout_height="@string/height_but"
-        android:layout_marginStart="@string/marginStart"
+        android:layout_width="85sp"
+        android:layout_height="67sp"
+        android:layout_marginStart="15sp"
+        android:onClick="onClickButton"
         android:text="="
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button_point"
@@ -193,9 +210,10 @@
 
     <Button
         android:id="@+id/button_9"
-        android:layout_width="@string/width_but"
-        android:layout_height="@string/height_but"
-        android:layout_marginStart="@string/marginStart"
+        android:layout_width="85sp"
+        android:layout_height="67sp"
+        android:layout_marginStart="15sp"
+        android:onClick="onClickButton"
         android:text="9"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button_8"
@@ -204,9 +222,10 @@
 
     <Button
         android:id="@+id/button_8"
-        android:layout_width="@string/width_but"
-        android:layout_height="@string/height_but"
-        android:layout_marginStart="@string/marginStart"
+        android:layout_width="85sp"
+        android:layout_height="67sp"
+        android:layout_marginStart="15sp"
+        android:onClick="onClickButton"
         android:text="8"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button_7"
@@ -215,9 +234,10 @@
 
     <Button
         android:id="@+id/button_multiply"
-        android:layout_width="@string/width_but"
-        android:layout_height="@string/height_but"
-        android:layout_marginStart="@string/marginStart"
+        android:layout_width="85sp"
+        android:layout_height="67sp"
+        android:layout_marginStart="15sp"
+        android:onClick="onClickButton"
         android:text="*"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button_9"
