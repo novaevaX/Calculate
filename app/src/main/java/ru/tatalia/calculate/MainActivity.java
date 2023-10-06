@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import javax.xml.xpath.XPathExpression;
+
 public class MainActivity extends AppCompatActivity {
 
     private TextView textView;
@@ -14,7 +16,9 @@ public class MainActivity extends AppCompatActivity {
             butMinus, butPlus, butMultiply, butDelete, butClear, butDivide, butSolve, butPoint;
     private String str;
     private String zero = "0";
+    private String findStr = "0123456789";
     private boolean firstSymbol = true;
+    private boolean notNumber = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
                 str = String.valueOf(textView.getText());
                 str += "0";
                 textView.setText(str);
+                checkLastSymbol();
             }
         });
         but1 = findViewById(R.id.button_1);
@@ -40,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
                 str = String.valueOf(textView.getText());
                 str += "1";
                 textView.setText(str);
+                checkLastSymbol();
             }
         });
         but2 = findViewById(R.id.button_2);
@@ -50,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
                 str = String.valueOf(textView.getText());
                 str += "2";
                 textView.setText(str);
+                checkLastSymbol();
             }
         });
         but3 = findViewById(R.id.button_3);
@@ -60,6 +67,7 @@ public class MainActivity extends AppCompatActivity {
                 str = String.valueOf(textView.getText());
                 str += "3";
                 textView.setText(str);
+                checkLastSymbol();
             }
         });
         but4 = findViewById(R.id.button_4);
@@ -70,6 +78,7 @@ public class MainActivity extends AppCompatActivity {
                 str = String.valueOf(textView.getText());
                 str += "4";
                 textView.setText(str);
+                checkLastSymbol();
             }
         });
         but5 = findViewById(R.id.button_5);
@@ -80,6 +89,7 @@ public class MainActivity extends AppCompatActivity {
                 str = String.valueOf(textView.getText());
                 str += "5";
                 textView.setText(str);
+                checkLastSymbol();
             }
         });
         but6 = findViewById(R.id.button_6);
@@ -90,6 +100,7 @@ public class MainActivity extends AppCompatActivity {
                 str = String.valueOf(textView.getText());
                 str += "6";
                 textView.setText(str);
+                checkLastSymbol();
             }
         });
         but7 = findViewById(R.id.button_7);
@@ -100,6 +111,7 @@ public class MainActivity extends AppCompatActivity {
                 str = String.valueOf(textView.getText());
                 str += "7";
                 textView.setText(str);
+                checkLastSymbol();
             }
         });
         but8 = findViewById(R.id.button_8);
@@ -110,6 +122,7 @@ public class MainActivity extends AppCompatActivity {
                 str = String.valueOf(textView.getText());
                 str += "8";
                 textView.setText(str);
+                checkLastSymbol();
             }
         });
         but9 = findViewById(R.id.button_9);
@@ -120,6 +133,7 @@ public class MainActivity extends AppCompatActivity {
                 str = String.valueOf(textView.getText());
                 str += "9";
                 textView.setText(str);
+                checkLastSymbol();
             }
         });
         butPercent = findViewById(R.id.button_percent);
@@ -128,28 +142,90 @@ public class MainActivity extends AppCompatActivity {
         butMinus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                setFirstSymbol();
-                str = String.valueOf(textView.getText());
-                str += "-";
-                textView.setText(str);
+                if (notNumber == false) {
+                    setFirstSymbol();
+                    str = String.valueOf(textView.getText());
+                    str += "-";
+                    textView.setText(str);
+                    checkLastSymbol();
+                }else{
+                    str = String.valueOf(textView.getText());
+                    str = str.substring(0, str.length() - 1);
+                    str += "-";
+                    textView.setText(str);
+                    checkLastSymbol();
+                }
             }
         });
         butPlus = findViewById(R.id.button_plus);
         butPlus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                str = String.valueOf(textView.getText());
-                str += "+";
-                textView.setText(str);
+                if (notNumber == false) {
+                    str = String.valueOf(textView.getText());
+                    str += "+";
+                    textView.setText(str);
+                    checkLastSymbol();
+                }else{
+                    str = String.valueOf(textView.getText());
+                    str = str.substring(0, str.length() - 1);
+                    str += "+";
+                    textView.setText(str);
+                    checkLastSymbol();
+                }
             }
         });
         butMultiply = findViewById(R.id.button_multiply);
         butMultiply.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                str = String.valueOf(textView.getText());
-                str += "*";
-                textView.setText(str);
+                if(notNumber == false) {
+                    str = String.valueOf(textView.getText());
+                    str += "*";
+                    textView.setText(str);
+                    checkLastSymbol();
+                }else{
+                    str = String.valueOf(textView.getText());
+                    str = str.substring(0, str.length() - 1);
+                    str += "*";
+                    textView.setText(str);
+                    checkLastSymbol();
+                }
+            }
+        });
+        butDivide = findViewById(R.id.button_divide);
+        butDivide.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (notNumber == false) {
+                    str = String.valueOf(textView.getText());
+                    str += "/";
+                    textView.setText(str);
+                    checkLastSymbol();
+                } else{
+                    str = String.valueOf(textView.getText());
+                    str = str.substring(0, str.length() - 1);
+                    str += "/";
+                    textView.setText(str);
+                    checkLastSymbol();
+                }
+            }
+        });
+        butPoint = findViewById(R.id.button_point);
+        butPoint.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (notNumber == true){
+                    str = String.valueOf(textView.getText());
+                    str += "0.";
+                    textView.setText(str);
+                    checkLastSymbol();
+                } else {
+                    str = String.valueOf(textView.getText());
+                    str += ".";
+                    textView.setText(str);
+                    checkLastSymbol();
+                }
             }
         });
         butDelete = findViewById(R.id.button_del);
@@ -158,12 +234,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 str = String.valueOf(textView.getText());
                 if (str.length() > 1){
-                    str.substring(0, str.length() - 1);
+                    str = str.substring(0, str.length() - 1);
                 }else{
                     str = "0";
                     firstSymbol = true;
                 }
                 textView.setText(str);
+                checkLastSymbol();
             }
         });
         butClear = findViewById(R.id.button_clear);
@@ -174,25 +251,14 @@ public class MainActivity extends AppCompatActivity {
                 str = "0";
                 firstSymbol = true;
                 textView.setText(str);
-            }
-        });
-        butDivide = findViewById(R.id.button_divide);
-        butDivide.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                str = String.valueOf(textView.getText());
-                str += "/";
-                textView.setText(str);
+                checkLastSymbol();
             }
         });
         butSolve = findViewById(R.id.button_solve);
-        butPoint = findViewById(R.id.button_point);
-        butPoint.setOnClickListener(new View.OnClickListener() {
+        butSolve.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                str = String.valueOf(textView.getText());
-                str += ".";
-                textView.setText(str);
+                
             }
         });
     }
@@ -208,4 +274,12 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
+
+    private void checkLastSymbol(){
+        String oneSymb;
+        oneSymb = str.substring(str.length() - 1, str.length());
+        notNumber = findStr.indexOf(oneSymb) < 0 ? true : false;
+    }
+
+
 }
